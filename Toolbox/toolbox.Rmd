@@ -1,0 +1,716 @@
+---
+title: "ToolBox"
+author: "David Asare Kumi"
+date: "11/4/2019"
+output: html_document
+---
+
+
+## Requirement
+
+- You have to set up a Github account. Github is a tool for collaborative code sharing and editing.
+
+- We will be submitting links to files we publicly place in our Github account as part of our course projects.
+
+## Specialization Motivation
+
+- Teddy Roosevelt quote - "Persons trying to get things done even if there are obstacles in the way".
+
+## Why data Science?
+
+- cheaper to collect.
+
+- cheaper to store.
+
+- Data in areas which we did not use to have data.
+
+## Why statistical data science
+
+- Statistics is the science of learning from data.
+
+## Why lucky?
+
+- Internet discovery (you can build something huge).
+
+- Tools and competitions and website have all been developed around data.
+
+## Why R?
+
+- It is free.
+
+- It has a comprehensive set of packages.
+
+1. Data access.
+
+2. Data Cleaning.
+
+3. Analysis.
+
+4. Data Reporting.
+
+- It has one of the best development environments.
+
+1. Rstudio: http://www.rstudio.com/
+
+- It has an amazing eco-system of developers.
+
+- Packages are easy to install and play nicely together.
+
+## Who is a data Scientist
+
+- Some one who uses data to answer questions across several areas of work.
+
+## Our goal
+
+1. Hacking.
+
+2. Maths and Statistics knowledge.
+
+3. Substantive Expertise.
+
+4. Machine Learning = Intersection of Hacking and Maths and Statistics only.
+
+5. Danger zone = Intersection of Hacking and Substantive Expertise only.
+
+6. Theoretical Research = Intersection of Substantive Expertise and Maths and Statistics only.
+
+7. Data Science = Intersection of all three areas i.e. Hacking, Substantive Expertise and Maths and Statistics.
+
+
+## Specialization Textbooks
+
+1. Elements of Data Analytic Style - by Jeff Leek.
+
+2. R Programming for Data Science - by Roger Peng.
+
+3. Exploratory Data Analysis with R - by Roger Peng.
+
+4. Report Writing for Data Science in R - by Roger Peng.
+
+5. Statistical Inference for data Science - by Brain Caffo.
+
+6. Regression Modelling for Data Science in R -by Brain Caffo.
+
+7. Developing Data Products in R - by Brian Caffo.
+
+## Books Relevant to the Specialization
+
+- The Art of Data Science by Roger Peng.
+
+- How to be a Modern Scientist by Jeff Leek.
+
+- Free pdf (w3css) - w3schools.com.
+
+## What do data scientists do?
+
+- Define the question of interest.
+
+- Define the ideal data set.
+
+- Determine what data you can access.
+
+- Obtain the data from (from data base/website etc).
+
+- Clean the data.
+
+- Perform exploratory data analysis (plots).
+
+- Performing statistical prediction and modelling.
+
+- Interpreting the results and challenging them.
+
+- Synthesizing/write up results.
+
+- Create reproducible code.
+
+8. Distributing the results - interactive graphics, presentations, writeups, interactive apps to other people etc.
+
+## The main work horse of data science
+
+- We are going to focus on R.
+
+- Coding will be done in R-studio.
+
+- The R IDE is free.
+
+- Primary file types - R script. It's a file with extension .R and it's a text file.
+
+- Primary file types - R markdown document with extension .Rmd.
+
+## Sharing your results
+
+- Github and Git.
+
+- Where to run the Github commands - the shell.
+
+## Rstudio Interface
+
+- Top left corner - file (click on the file and you will have a list of activities).
+
+- Down - you will see a console.
+
+- There are a lot of R functions.
+
+- R-script - this is a text file.
+
+- R markdown documents - RMD and HTML.
+
+- Sharing your results - Github.
+
+## Getting Help
+
+- Asking questions - rely on your fellow peers.
+
+- The R community.
+
+- Fastest answer is the one you try to answer yourself - you can get it from google, stack overflow.
+
+- Post questions to the message board - the most interactive way of learning (get involved).
+
+## Help Function (Some important functions)
+
+- ?rnorm.
+
+- help.search("rnorm").
+
+- args("rnorm").
+
+- function(n,mean=o,sd=1).
+
+- You can also type the function in r console and you will get the arguments.
+
+- R reference card. http://cran.r-project.org/doc/contrib/short-refcard.pdf
+
+## How to ask an R question
+
+- What steps will reproduce the problem?
+
+- What is the expected output?
+
+- What do you see instead?
+
+- What version of the product (e.g. R, packages etc) are you using?
+
+- What operating system? Are you working on mac or windows.
+
+## How to ask a data analysis question.
+
+- What is the question you are trying to answer?
+
+- What steps / tools did you use to answer it?
+
+- What did you expect to see?
+
+- What do you see instead?
+
+- What other solutions have you thought about?
+
+- Be specific in the title of your questions.
+
+- Bad.
+
+1. HELP! can't fit linear model!
+
+2. HELP! Don't understand PCA!
+
+- Better.
+
+1. R3.5.2 lm() function produces seg fault with large data frame, Mac osx 10.6.3.
+
+2. Applied pricipal components analysis to a matrix - what are U, D and V^T?
+
+- Even better.
+
+1. R3.5.2 lm() function on Mac osx 10.6.3 - seg fault on large data frame.
+
+2. Using principal components analysis to discover common variation in rows of a matrix, should I use U,D or V^T?
+
+- The more specific you are, the faster your answer will be.
+
+## Etiquette for forums/help sites: Dos (How to ask questions the smart way)
+
+- Describe the goal. 
+
+- Be explicit.
+
+- Provide the minimum information.
+
+- Be courteous/polite (never hurts).
+
+- Follow up and post solutions.
+
+- Use the forums rather than personal emails.
+
+## Don'ts
+
+- Immediately assume you found a bug.
+
+- Grovel as a substitute for doing your work.
+
+- Post homework questions on mailing lists(people don't like doing your homework).
+
+- Email multiple mailing list at once/the wrong mailing list.
+
+- Ask others to fix your code without explaining the problem.
+
+- Ask about general data analysis questions on R forums.
+
+## Finding Answers
+
+### Key characteristics of Hackers
+
+- Willing to find answers on their own.
+
+- Knowledgeable about where to find answers on their own.
+
+- Unintimidated by new types of data packages.
+
+- Un afraid to say they don't know the answer.
+
+- Polite but relentless.
+
+- Google knows it too.
+
+## Where to look for different types of questions
+
+- R programming (see also http://bit.ly/ufaadn)
+
+1. Search the archive of the class forums.
+
+2. Read the manual/help files.
+
+3. Search on the web.
+
+4. Ask a skilled friend.
+
+5. Post to the class forum.
+
+6. Post to the R mailing list or stack overflow.
+
+- Data Analysis/Statistics
+
+1. Search the archives of the class forums.
+
+2. Search on the web.
+
+3. Ask a skilled friend.
+
+4. Post to the class forum.
+
+5. Post to cross validated.
+
+- Other software
+
+1. Go to software specific websites.
+
+## A note on Googling data science questions
+
+- The best place to start for general questions is the forums.
+
+- Stack overflow (use the tag"[r]"), R mailing list for software questions, cross validated for more general questions.
+
+- Otherwise Google "[data type] data analysis" or "[data type] R package".
+
+- Try to identify what data analysis is called for your data type.
+
+1. Biostatistics  for medical data.
+
+2. Data science for data from the web analytics.
+
+3. Machine learning for data in computer science/computer vision.
+
+4. Natural Language processing for data from texts.
+
+5. Signal processing for data from electrical signals.
+
+6. Business analytics for data on customers.
+
+7. Econometrics for economic data.
+
+8. Statistical process control for data about industrial processes etc.
+
+- Credit goes to Roger Peng for the help video and inspired by Eric Raymonds.
+
+## R Programming Overview
+
+- R programming content.
+
+1. Data types.
+
+2. Subsetting.
+
+3. Reading and Writing Data.
+
+4. Control Structures.
+
+5. Functions.
+
+6. Scoping.
+
+7. Vectorized Operations.
+
+8. Dates and Times.
+
+9. Debugging.
+
+10. Simulation.
+
+11. Optimization.
+
+## Readlines of a Text file
+
+- readLines can be useful for reading in lines of webpages.
+
+- This might take time.
+
+- con <-url("http://www.jhsph.edu","r")
+
+- x <-readLines(con)
+
+- head(x)
+
+## How to figure out when something is wrong!
+
+- How do you know that something is wrong with your function?
+
+- What was your input? How did you call the function.
+
+- What you expecting? Output, messages, other results.
+
+- What did you get? 
+
+- How does what you get differ from what you are expecting?
+
+- Were your expectations correct in the first place?
+
+- Can you reproduce the problem (exactly)?
+
+## Getting and Cleaning data overview
+
+- We talk about raw vs tidy(processed) data.
+
+- How to download files.
+
+- Importing data. Reading data - Excel, XML, JSON, MySQL, HDF5, Web,...
+
+- Merging data.
+
+- Reshaping data.
+
+- Summarizing data.
+
+- Finding and replacing.
+
+- Data resources.
+
+### Raw data
+
+- The original source of the data.
+
+- Often hard to use for data analysis.
+
+- Data analysis includes processing.
+
+- Raw data may only need to be processed once.
+
+### Processed data
+
+- Data that is ready for analysis.
+
+- Processing can include merging, subsetting, transforming etc.
+
+- There may be standards for processing.
+
+- All steps should be recorded.
+
+## Exploratory Data Analysis Overview
+
+- Principle of analytic graphics.
+
+- Exploratory graphs.
+
+- Different plotting systems in R - ggplot2, lattice, base  plotting system.
+
+- Hierarchical clustering.
+
+- K means clustering.
+
+- Dimensions reduction.
+
+-  This will also cover Principles of analytic graphics.
+
+1. Principle 1: Show comparisons.
+
+2. Principle 2: Show causality, mechanism, explanation.
+
+3. Principle 3: Show multivariate data.
+
+4. Principle 4: Integrate multiple models of evidence.
+
+5. Principle 5: Describe and document the evidence.
+
+6. Principle 6: Content is king.
+
+- K means clustering will be covered too.
+
+## Reproducible Research Overview
+
+- We talk about creating code and documents that will completely reproduce all the analysis you have done.
+
+- Structure of a data analysis.
+
+- Organizing a data analysis.
+
+- Markdown.
+
+- LaTeX.
+
+- R Markdown.
+
+- Evidence based data analysis.
+
+- Rpubs.
+
+### Steps in a data analysis
+
+1. Define the question.
+
+2. Define the ideal data set.
+
+3. Determine what data you can access.
+
+4. Obtain the data.
+
+5. Clean the data.
+
+6. Exploratory data analysis.
+
+7. Statistical prediction/modelling.
+
+8. Interprete results.
+
+9. Synthesize/write up results.
+
+10. Create reproducible code.
+
+### Data Analysis files
+
+- Data
+
+1. Raw data.
+
+2. Processed data.
+
+- Figures
+
+1. Exploratory figures.
+
+2. Final figures.
+
+- R code
+
+1. Raw scripts.
+
+2. Final scripts.
+
+3. R markdown files (optional).
+
+- Text
+
+1. Readme files.
+
+2. Text of analysis.
+
+## Statistical Inference Overview
+
+- Basic probability, Likelihood, confidence intervals.
+
+- Asymptotics.
+
+- Distributions - e.g. normal, binomial, poisson etc.
+
+- Hypothesis testing.
+
+- Power.
+
+- Bootstrapping.
+
+- Non parametric tests.
+
+- Basic bayesian statistics.
+
+## Regression Models Overview
+
+- Linear regression.
+
+- Multiple regression.
+
+- Scatter plot smoothing/splines.
+
+- Ideas like confounding.
+
+- Residuals and diagnostics.
+
+- Predictions and forecasting using linear models.
+
+- Model mis-specification.
+
+- Regression to the mean.
+
+- Machine Learning regression.
+
+- Resampling inference in regression, bootstrapping, permutation tests.
+
+- Weighted regression.
+
+- Mixed models (random intercepts).
+
+## Practical Machine Learning Overview
+
+- Prediction study design.
+
+- Types of errors.
+
+- Cross validation.
+
+- The caret package.
+
+- Plotting for prediction.
+
+- Preprocessing.
+
+- Predicting with regression.
+
+- Predicting with trees.
+
+- Boosting.
+
+- Bagging.
+
+- Model blending.
+
+- Forecasting.
+
+- We will also cover basic terms like:
+
+- True positive (correctly identified), True negative (correctly rejected).
+
+- False positive (incorrectly identified), False negative (incorrectly rejected) etc.
+
+- Correlated predictors.
+
+- Basic idea behind boosting.
+
+## Basic Terms
+
+- True positives.
+
+- True negatives.
+
+- False positives.
+
+- False negatives.
+
+- Sensitivity and Specificity.
+
+## Building Data Products Overview
+
+- What do you do with data analysis of R functions created.
+
+- R packages
+
+1. devtools.
+
+2. roxygen.
+
+3. testthat
+
+- Interactive graphics.
+
+- rcharts.
+
+- Interactive apps like slidify and shiny.
+
+- R packages for engineers - how to build them.
+
+- Shiny - use R itself to build web application which will allow you to interact.
+
+## Installing R on Windows
+
+- Load, launch your web browser (you can use chrome).
+
+- Go to Comprehensive R Archive Network (CRAN). Type in your browser cran.r-project.org.
+
+- Go to windows version.
+
+- Download R 3.5.2 say.
+
+- Go through the installation.
+
+- By default R will install both the 32 bits and 64 bits.
+
+- You can use the default or customize (SDI/MDI).
+
+## Installing R studio(Integrated Development Environment-IDE)
+
+- You must have R already installed before you can install R studio.
+
+- Go to R studio.com i.e. the rstudio website.
+
+- Two versions - server version and the desktop version.
+
+- Download the desktop version and go through the steps to install.
+
+## Install R on Mac
+
+- load a web browser.
+
+- cran.r-project.org.
+
+- click on Mac.
+
+- download R.
+
+- go through the installation.
+
+- remember to type in your administrator password.
+
+- wait till it finishes.
+
+## Installing Rstudio on Mac
+
+- You must have R already installed.
+
+- Go to rstudio.com.
+
+- Click on the green button that directs you to down.
+
+- When you are done, install it.
+
+## Installing Outside Software on Mac (osx Mavericks)
+
+- Install software from various places a lot in this course.
+
+- Go to apple menu.
+
+- Systems preferences.
+
+- Security privacy.
+
+- Type in password.
+
+### Options
+
+- Click on anywhere button.
+
+- Safest option is to click on Mac app store.
+
+- There are several options.
+
+- With the Mac app store you have to even install the ads etc. so click on the anywhere option.
+
+
+
+
+ 
+

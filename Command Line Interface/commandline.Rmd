@@ -1,0 +1,938 @@
+---
+title: "Command Line Interface"
+author: "David Asare Kumi"
+date: "11/5/2019"
+output: html_document
+---
+
+
+## Introduction to Command Line Interface (CLI)
+
+- Nearly every computer comes with a CLI.
+
+- Windows: GitBash (see introduction to Git).
+
+- Mac/Linux: Terminal.
+
+### What can the CLI do?
+
+- The CLI can help you to;
+
+- Navigate folders.
+
+- Create files, folders and programs.
+
+- Edit files, folders and programs.
+
+- Run computer programs (this is one of the main uses).
+
+## Basics of Directories
+
+- Directory is just another name for folder.
+
+- Directories on your computer are organized like a tree.
+
+- Directories can be inside other directories.
+
+- We can navigate directories using the CLI.
+
+## Directory Structure
+
+- The directory structure on your computer looks something like this (tree structure) where each directory has sub directories.
+
+- Special directories (root): The directory at the top of the tree is called the root directory.
+
+- The root directory contains all other directories.
+
+- The name of the root directory is represented by a forward slash (/).
+
+- The home directory is your working directory.
+
+- The home directory is a sub directory of the root directory.
+
+## Navigating Directories with the CLI
+
+- Windows users:
+
+- Open the start menu.
+
+- Search for git Bash.
+
+- Open Git Bash.
+
+- Mac users:
+
+- Open spot light.
+
+- Search Terminal.
+
+- Open Terminal.
+
+## CLI Basics
+
+- When you open your CLI you will see your prompt, which will look something like the name of your computer followed by your user name, followed by a $.
+
+- When you open your CLI, you start in your home directory.
+
+- Whatever directory you are currently working with in your CLI is called the "working directory". CLI = working directory.
+
+## CLI Basics
+
+- You can imagine tracing all of the directories from your root directory to the directory you are currently in.
+
+- This is called the "path" to your working directory.
+
+- In your CLI prompt, type pwd and press enter.
+
+- This will display the path to your working directory.
+
+- As you can see, we get the prompt back after entering a command.
+
+## CLI commands
+
+- You use the CLI prompt by typing in a command and pressing enter.
+
+- pwd can be used at anytime to display the path to your working directory (pwd is an abbreviation for "print working directory").
+
+- CLI commands follow this recipe: commands, flags, arguments.
+
+- Command is the CLI command which does a specific task.
+
+- Flags are options we give to the command to trigger certain behaviours, preceeded by a-.
+
+- Arguments can be what the command is going to modify, or other options for the command.
+
+- Depending on the command, there can be zero or more flags and arguments.
+
+- For example pwd is a command that requires no flags or arguments.
+
+- pwd displays the path to the current working directory.
+
+- clear will clear out the commands in your CLI window.
+
+- ls lists files and folders in the current directory.
+
+- ls-a lists hidden and unhidden files and folders.
+
+- ls-al lists details for hidden and unhidden files and folders.
+
+- Notice that -a and -l are flags (they are preceeded by a -).
+
+- They can be combined into the flag: -al.
+
+- ls -l list the details of the files and folders.
+
+- cd stands for "change directory".
+
+- cd takes as an argument the directory you want to visit.
+
+- cd with no argument takes you to your home directory.
+
+- cd .. allows you to change directory to one level above your current directory.
+
+- mkdir stands for "make directory".
+
+- Just like: right -> create new folder.
+
+- mkdir takes as an argument the name of the directory you are creating.e.g jeff$mkdir Documents
+
+- touch creates an empty file.
+
+- cp stands for "copy".
+
+- cp takes as its first argument a file, and as its second argument the path to where you want the file to be copied.e.g. jeff$ cp test_file Document, jeff$ cd Documents, jeff$ ls, test_file.
+
+- cp can also be used for copying the contents of directories, but you must use the -r flag.
+
+- The line: cp-r Documents More_docs copies the contents of Documents into More_docs. Example, jeff$mkdir More_docs, jeff$ cp-r Documents More_docs.
+
+- rm stands for "remove".
+
+- rm takes the name of a file you wish to remove as its argument.
+
+- You can use rm to delete entire directories and their contents by using the -r flag.
+
+- Be very careful when you do this, there is no way to undo an rm. e.g. jeff$ rm-r More_docs, jeff$ ls.
+
+- mv stands for "move".
+
+- With mv you can move files between directories.
+
+- Touch creates a new file inside the working directory. e.g. jeff$ touch new_file, jeff$ mv new_file Documents, jeff$ ls.
+
+- You can also use mv to rename files.
+
+- echo will print what ever arguments you provide.e.g jeff$ echo Hello World!
+
+- data will print today's date e.g. jeff$date.
+
+## Introduction to Git
+
+- What is version control? "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later".
+
+- Many of us constantly create something, save it, change it, then save it again.
+
+- Version (or revision) control is a means of managing this process in a reliable and efficient way.
+
+- Especially important when collaborating with others.
+
+- What is Git? "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency".
+
+- http://git-scm.com/
+
+- Git is one of the most commonly used version control system now.
+
+- Created by the same people who developed Linux.
+
+- The most popular implementation of version control today.
+
+- Everything is stored in local repositories on your computer.
+
+- Operated from the command line.
+
+## Download Git
+
+- Go to the following website and click on the download link for your operating system (Mac, windows, Linux, etc). http://git-scm.com/downloads
+
+### Install Git
+
+- Once the file is done downloading, open it up to begin the Git installation.
+
+- Unless you really know what you are doing, just go with the default options at each step of the installation.
+
+- Once the installation is complete, hit the finish button (you may want to uncheck the box next to "Review ReleaseNotes.rtf").
+
+## Open Git Bash
+
+- Git Bash is only available for windows users. Mac users can use git through the terminal application.
+
+- Find a progrm called Git Bash which is the commandline environment for interacting with Git.
+
+- It should be located in the directory into which Git was installed (or for windows users, in the start menu).
+
+- Once a git bash opens, you will see a short welcome message followed by the name of your computer and a dollar sign on the next line.
+
+- The dollar sign means that it's your turn to type a command.
+
+## Configure username and email
+
+- Each commit to a Git repository will be tagged with the username of the person who made the commit.
+
+- Enter the following commands in GitBash, one at a time, to set your username and email.
+
+- $ git config --global user.name "DaAsKu".
+
+- $ git config --global user.email "krime_irie@yahoo.co.uk".
+
+- You will only have to do this once, but you can always change these down the road using the same commands.
+
+- Now type the following to confirm your changes (they may be listed toward the bottom): $ git config --list.
+
+### What's next?
+
+- Go ahead and close GitBash with the following command: $ exit.
+
+- Now that Git is set up on your computer, we are ready to move on to Github, which is a web based platform  that lets you do some pretty cool stuff.
+
+- Once Github is up and running, we will show you how to start using these tools to your benefit.
+
+## Introduction to Github
+
+- What is GitHub?
+
+- "GitHub is a web based hosting service for soft ware development projects that use Git revision control system". It allows you to contribute to projects online.
+
+- It allows users to "push" and "pull" their local repositories to and from remote repositories on the web.
+
+- Provides users with a home page that displays their public repositories.
+
+- Users repositories are backed up on the GitHub server in case something happens to the local copies.
+
+- Social aspect allows users to follow one another and share projects. The key aspect of github is the social aspect.
+
+## Set up a GitHub account
+
+- Go to the GitHub home page at https://github.com/
+
+- Enter a username, email, and password and click "sign up for GitHub".
+
+- You should use the same email address that you used when setting up Git in the previous lecture.
+
+- On the next screen, select the free plan and click "Finish sign up".
+
+## Navigating GitHub
+
+- After signing up, you will find yourself on this page, which has several helpful resources for learning more about Git and Github.
+
+- Try clicking on your username in the upper righthand corner of the screen to view your GitHub profile.
+
+- Your profile is where all of your activity on GitHub is displayed.
+
+- Allow you to show other people who you are working with and what you are working on.
+
+- As you work on more and more projects, your profile becomes a portfolio of your work.
+
+- Finally, if you click on edit your profile in the top right hand portion of the screen you can add some basic information about yourself to your profile.
+
+- This is totally optional but if you do good work, you ought to take some credit for it.
+
+## Creating a GitHub Repository
+
+- Recap: Git vs GitHub.
+
+- You don't need GitHub to use Git.
+
+- Git = local(on your computer); GitHub = Remote (on the web).
+
+- GitHub allows you to:
+
+1. Share your repositories with others.
+
+2. Access other users repositories.
+
+3. Store remote copies of your repositories {on GitHub server) in case something happens to your local copies (on your computer).
+
+## Creating a GitHub Repository
+
+- Two methods of creating a GitHub repository.
+
+1. Start a repository from scratch.
+
+2. "Fork" another users repository.
+
+- We will start with the first method.
+
+- Note: a repository is often referred to as a repo.
+
+## Start a repository from Scratch
+
+- Either go to your profile page (https:github.com/your usernamehere/) and click on "Create a new repo" in the upper right hand corner of the page OR;
+
+- Go directly to https://github.com/new (you will need to log into your Github account if you haven't already done so).
+
+### Start a repository from scratch
+
+- Create a name for your repo and type a brief description of it.
+
+- Select public (private repos require a paid[or education] account). Public repo is the default and free to share.
+
+- Check the box next to initialize this repository with a README.
+
+- Click the "create repository" button.
+
+- Congratulations! You have created a repository.
+
+## Creating a local copy
+
+- Now you need to create a copy of this repo on your computer so that you can make changes to it.
+
+- Open GitBash.
+
+- Create a directory on your computer where you will store your copy of the repo e.g. $mkdir~/test-repo; $ mkdir ~/kumi-gitgui
+
+- Navigate to this new directory using the following command: $ cd ~/test-repo; $ cd ~/kumi-gitgui.
+
+- Creating a local copy; Initialize a local Git repository in this directory - $ git init.
+
+- Point your local repository at the remote repository you just created on GitHub server (in other words link the two up). $ git remote add origin https://github.com/your userNameHere/test-repo.git.
+
+## Fork another User's Repository
+
+- The second method of creating a repository is to make a copy of some one else's repo.
+
+- This process is called "forking" and is an important aspect of open source software development.
+
+- Begin by navigating to the desired repository on the GitHub website and click the "Fork" button. You cannot fork a repo when you own it.
+
+### Clone the Repository
+
+- You now have a copy of the desired repository on your GitHub account.
+
+- Need to make a local copy of the repo on your computer.
+
+- This process is called "Cloning" and can be done using the following command: $ git clone https://github.com/your UserNameHere/repoNameHere.git.
+
+- This will clone the repository into your current directory.
+
+## What else?
+
+- If you make changes to your local copy of the repo, you will probably want to push your changes to GitHub at some point.
+
+- You also may be interested in staying current with any changes made to the original repository from which you forked your copy.
+
+- https://help.github.com/articles/fork-a-repo
+
+- http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository
+
+## Basic Git Commands
+
+- The first thing we look at is the structure of where the files are. Git data Transport Commands.
+
+### Pushing and Pulling
+
+- Git Data Transport Commands.
+
+- Workspace -> add -> index -> commit -> local repo -> push -> remote repo. <- fetch/pull.
+
+### Adding
+
+- Suppose you add new files to a local repository under version control.
+
+- You need to let Git know that they need to be tracked;
+
+1. git add. - adds all new files.
+
+2. git add -u - updates tracking for files that changed names or were deleted.
+
+3. git add -A - does both of the previous.
+
+- You should do this before committing.
+
+### Committing
+
+- You have changes you want to commit to be saved as an intermediate version.
+
+- You type the command git commit -m "message" where message is a useful description of what you did.
+
+- This only updates your local repo, not the remote repo on GitHub.
+
+### Pushing
+
+- You have saved local commits you would like to update on the remote (GitHub).
+
+- You type the command git push.
+
+### Branches
+
+- Sometimes you are working on a project with a version being used by many people.
+
+- You may not want to edit that version.
+
+- So you can create a branch with the command git checkout -b branchname.
+
+- To see what branch you are on type; git branch.
+
+- To switch back to the master branch type; git checkout master.
+
+- The default branch is the master branch.
+
+### Pull Request
+
+- If you fork someone's repo or have multiple branches you will both be working separately.
+
+- Sometimes you want to merge in your changes into the other branch/repo.
+
+- To do so you need to send a pull request.
+
+- This is a feature of GitHub not git.
+
+## Time to be a hacker
+
+- Git documentation http://git-scm.com/doc
+
+- GitHub help https://help.github.com/
+
+- Google/Stack Overflow are great for GitHub.
+
+## Basic Markdown(extension to .md)
+
+- This is just a text file.
+
+- Markdown syntax heading.
+
+- (##) This is a secondary heading.
+
+- (###) This is a tertiary heading.
+
+### Unordered Lists
+
+- (*) first item in list.
+
+- (*) second item in list.
+
+- (*) third item in list.
+
+- It's unordered because it starts with dots.
+
+- You can use - or * at the beginning.
+
+### Getting Markdown Help
+
+- An introduction to markdown http://daringfireball.net/projects/markdown/
+
+- Click the MD button in Rstudio for a quick guide.
+
+- Rmarkdown http://www.rstudio.com/ide/docs/authoring/using_markdown (you don't need this until Reproducible Research).
+
+## Installing R packages
+
+### R Packages
+
+- When you download R from the Comprehensive R Archive Network (CRAN), you get that base R system.
+
+- The base R system comes with basic functionality: Implements the R language.
+
+- One reason R is so useful is the large collection of packages that extend the basic functionality of R.
+
+- R packages are developed and published by the larger R community.
+
+### Obtainig R Packages
+
+- The primary location for obtaining R packages is CRAN.
+
+- For biological applications many packages are available from the Bioconductor project.
+
+- You can obtain information about the available packages on CRAN with the available.packages() function.
+
+- a <-available.packages().
+
+- head(rownames(a),3).
+
+- There are approximately 5200 packages on CRAN covering a whole range of topics.
+
+- A list of some topics is available through the Task Views link, which groups together many R packages related to a given topic.
+
+## Installing an R package
+
+- Packages can be installed with the install.packages() function in R.
+
+- To install a single package, pass the name of the package to the install.packages() function as the first argument.
+
+- The following code installs the slidify package from CRAN.
+
+- install.packages("slidify").
+
+- This command downloads the slidify package from CRAN and installs it on your computer.
+
+- Any packages on which this package depends will also be downloaded and installed.
+
+- You can also install multiple R packages at once with a single call to install.packages().
+
+- Place the names of the R packages in a character vector.
+
+- install.packages(c("slidify","ggplot2","devtools")).
+
+## Installing an R package in Rstudio
+
+- Go to tools menu.
+
+- install packages. This opens a folder that will allow you to pick the repository.
+
+- Install from: Repository CRAN.
+
+- Packages: slidify.
+
+- Install to library.
+
+- install or cancel.
+
+## Installing an R package from Bioconductor 
+
+- To get the basic installer and basic set of R packages (warning, will install multiple packages).
+
+- source("http://bioconductor.org/biocLite.R")
+
+- biocLite.
+
+- Place the names of the R packages in a character vector.
+
+- biocLite (c("GenomicFeatures","AnnotationDBI"))
+
+- http://www.bioconductor.org/install/
+
+## Loading R packages
+
+- Installing a package does not make it immediately available to you in R: you must load the package.
+
+- The library() function is used to load packages into R.
+
+- The following code is used to load the ggplot2 package into R.
+
+- library(ggplot2)
+
+- Any packages that need to be loaded as dependencies will be loaded first, before the named package is loaded.
+
+- Note: Do not put the package name in quotes.
+
+- Some packages produce messages when they are loaded (but some don't).
+
+- After loading a package, the functions exported by that package will be attachd to the top of the search() list (after the workspace).
+
+- library(ggplot2)
+
+- search()
+
+## Installing Rtools
+
+- What is Rtools?
+
+- A collection of tools necessary for building R packages in windows.
+
+- Available for download at http://cran.r-project.org/bin/windows/Rtools/
+
+### Download Rtools
+
+- Select the .exe download link from the table that corresponds to your version of R. Note: if you are not sure what version of R you have, open or restart R and its the first thing that comes up in the console.
+
+- If you have the most recent version of R, you should select the most recent Rtools download (at the top the chart).
+
+- Once the download completes, open the .exe file to begin the installation.
+
+- Unless you really know what you are doing, you should just go with the default selections at each step of the installation.
+
+- There are only two exceptions worth noting.
+
+- If you already have cygwin installed on your machine, you should follow up the instructions given during installation (and linked to here: http://cran.r-project.org/bin/windows/Rtools/Rtools.txt).
+
+- Important: You should make sure that the box is checked to have the installer edit your PATH.
+
+### Install devtools
+
+- Once the Rtools installation completes, open Rstudio.
+
+- install the devtools R package if you have not previously done so.
+
+- If you aren't sure, enter find.package("devtools") in the console.
+
+- To install devtools, use install.packages("devtools").
+
+### verify Rtools installation
+
+- After devtools is done installing, load it using library(devtools).
+
+- Then type find_rtools() as shown.
+
+- This should return TRUE in the console if your Rtools installation worked properly.
+
+## Types of Data Science Questions
+
+- In approximate order of difficulty.
+
+1. Descriptive.
+
+2. Exploratory.
+
+3. Inferential.
+
+4. Predictive.
+
+5. Causal.
+
+6. Mechanistic.
+
+### About Descriptive Analysis
+
+- Goal; Describe a set of data.
+
+- The first kind of data analysis performed.
+
+- Commonly applied to census data.
+
+- The description and interpretation are different steps.
+
+- Descriptions can usually not be generalized without additional statistical modeling.
+
+- Example of descriptive analysis;
+
+1. US census.
+
+2. Google and Ngrams viewer.
+
+### About Exploratory Analysis
+
+- Goal: Find relationships you did not know about.
+
+- Exploratory models are good for discovering new connections.
+
+- They are also useful for defining future studies.
+
+- Exploratory analysis are usually not the final say.
+
+- Exploratory analysis alone should not be used for generalizing/predicting.
+
+- Correlation does not imply causation. This is very important.
+
+- Examples;
+
+1. Brain damages (scientific reports).
+
+2. Sloan digital sky survey.
+
+### About Inferential Analysis
+
+- Goal: Use a relatively small sample of data to say something about a bigger population.
+
+- Inference is commonly the goal of statistical models.
+
+- Inference involves estimating both the quantity you care about and your uncertainty about your estimate.
+
+- Inference depends heavily on both the population and the sampling scheme.
+
+- Example: Epidemiology - effects of air pollution control on life expectancy in United States.
+
+### About Predictive Analysis
+
+- Goal: To use the data on some objects to predict values for another object.
+
+- If X predicts Y, it does not mean that X causes Y.
+
+- Accurate prediction depends heavily on measuring the right variables.
+
+- Although there are better and worse prediction models, more data and a simple model works really well.
+
+- Prediction is very hard especially about the future references.
+
+- Examples:
+
+1. Predict the outcome of US elections.
+
+2. Teen ager getting pregnant before the father got to know.
+
+### About Causal Analysis
+
+- Goal: To find out what happens to one variable when you make another variable change.
+
+- Usually randomized studies are required to identify causation.
+
+- There are approaches to infering causation in non-randomized studies, but they are complicated and sensitive to assumptions.
+
+- Causal relationships are usually identified as average effects, but may not apply to every individual.
+
+- Causal models are usually the "gold standard" for data analysis.
+
+- Example: feacal transplant.
+
+### About Mechanistic Analysis
+
+- This is very rarely covered in data science.
+
+- Goal: Understand the exact changes in variables that lead to changes in other variables for individual objects.
+
+- Incredibly hard to infer, except in simple situations.
+
+- Usually modelled by a deterministic set of equations (physical/engineering science).
+
+- Generally the random component of the data is measurement error.
+
+- If the equations are known but the parameters are not they may be inferred with data analysis.
+
+- Example:
+
+1. Changes in empirical pavement designs.
+
+2. Engineering applications.
+
+## Experimental Design
+
+- This is about the basics of experimental designs.
+
+### Why you should care about experimental design - an exciting result
+
+- A very exciting result can lead you astray and land you in big trouble if you are not careful about experimental design.
+
+### Know and care about the analysis plan
+
+- The first thing to be aware when performing any analysis is to care about the analysis plan.
+
+- data cleaning.
+
+- data analysis.
+
+## Have a plan for data and code sharing
+
+- https://github.com/. Here you can share small amount of data analysis.
+
+- http://figshare.com/. This is where you can share large amounts of data analysis.
+
+- If you don't have a data sharing plan you can use this; https://github.com/jtleek/datasharing/
+
+### Formulate your question in advance
+
+- The first thing to do when you are actually performing an experiment is to formulate the question.
+
+- Question; Does changing the text on your website improve donations?
+
+- The key component of data science is the scientific descipline - require you answer a specific question when you are using data.
+
+### Experiment
+
+1. Randomly show visitors one version or the other.
+
+2. Measure how much they donate.
+
+3. Determine which is better.
+
+### Statistical Inference
+
+- This is a key idea of a large component of data science.
+
+- Here we look at population, sample, descriptive statistics, probability and inferential statistics.
+
+## Confounding
+
+- confounding simply tells you to pay attention to other variables that might influence relationships.
+
+- For instance when shoe size an literacy are correlated, there may actually not be any correlation between them but the confounding factor age may create that impression.
+
+## Correlation is not Causation
+
+### Spurious correlation
+
+- Observed correlation is not actually the correlation because they are influenced by other factors that may not be in the model.
+
+## Randomization and blocking
+
+- This is a way to deal with potential confounders.
+
+- If you can (and want to) fix a variable.
+
+1. website always says Obama 2014 on it.
+
+- If you don't fix a variable, stratify it.
+
+1. If you are testing sign up phrases and have two website colors, use both phrases equally on both.
+
+- If you can't fix a variable, randomize it.
+
+- If you can't fix a variable or stratify it, then randomize it.
+
+## Why does randomization help?
+
+- It makes it possible to determine the difference in treatment.
+
+## Prediction
+
+- Training set.
+
+- Test set.
+
+- Probability/Sampling.
+
+- Use probability and sampling to predict so as to be more accurate.
+
+## Prediction vs Inference
+
+- Prediction is more challenging than inference. For predictions you need the distributions to be separated.
+
+## Prediction key quantities
+
+- True Positive(TP): Test positive when disease is present.
+
+- True Negative(TN): Test negative when disease is not present.
+
+- False Positive(FP): Test positive when disease is not present.
+
+- False Negative(FN): Test negative when disease is present.
+
+- Sensitivity - p(positive test/disease).
+
+- Specificity - p(negative test/no disease).
+
+- Positive Predictive Value - p(disease/positive test).
+
+- Negative Predictive Value - p(no disease/negative test).
+
+- Accuracy - p(correct outcome).
+
+## Beware of data dredging
+
+- Trying several times before getting your final solution or conclusion.
+
+## Summary
+
+- Good Experiments;
+
+1. Have replication.
+
+2. Measure variability.
+
+3. Generalize to the problem you care about.
+
+4. Are transparent.
+
+- Prediction is not inference. Both can be important.
+
+- Beware of data dredging.
+
+## What is Data?
+
+### Definition of Data
+
+- " Data are values of qualitative or quantitative variables, belonging to a set of items".
+
+- Set of items - population, objects you are interested in.
+
+- First thing you need is the set of items.
+
+- Variable: A measurement or characteristic of an item e.g. height, volume of water in a tank etc.
+
+- Qualitative e.g. country of origin, sex, treatment.
+
+- These are measured on a continous scale. Examples include height, weight, blood pressure etc.
+
+### What do data look like?
+
+- Data comes in a row form. Below are the various ways.
+
+- textfiles.
+
+- An API.
+
+- Medical records.
+
+- Video.
+
+- audio file.
+
+- Spreadsheets, websites.
+
+- Variables and columns, observation of rows (processed).
+
+### The data is the second most important thing
+
+- The most important thing in the data science is the question (first on list).
+
+- The second most important is the data.
+
+- Often the data will limit or enable the questions.
+
+- But having data can't save you if you don't have a question.
+
+### What about Big Data
+
+### How much is there?
+
+- In 2011, a colossal 1.8 zettabytes of data was available. Realistically only a fraction of this can be analyzed.
+
+### So what about big data?
+
+- cloud.
+
+- Big data.
+
+- Cloud meets big data.
+
+### Depends on your perspective
+
+- Over time technology will change big data . Once the hardware catches up with big data, then it can be analyzed.
+
+### Why big data now?
+
+- It's now possible to collect much more data, much more cheaply than it was before to analyze it.
+
+### Big or small you need the right data
+
+- Don't use Hadoop - your data isn't that big.
+
+- " The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.." Tukey.
+
+- "... no matter how big the data are." Leek.
+
+- "Regardless of the size of the data, you need the right data".
+
+- " Data, when not properly analyzed can be suicidal economically, and scientifically can be likened to a holocaust". David Asare Kumi.
+
+- " The world without data would have been disastrous". David Asare Kumi.
+
+
+
